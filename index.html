@@ -1,24 +1,76 @@
-<!DOCTYPE HTML>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <title>My First Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <title>Address book</title>
 </head>
 
-<nav>
-    <ul>
-        <li> <a href="index.html"> Home</li></a>
-        <li> <a href="aboutus.html"> About Us</li></a>
-        <li> <a href="services.html"> Services</li></a>
-    </ul>
-</nav>
+<body class="bg-grey-light px-6 py-6">
+  <div class="w-full py-4 pb-4">
+      <h1 class="font-sans text-4xl text-grey-darkest text-center">Contacts</h1>
+  </div>
 
-<body>
-    <h1>Hello World</h1>
-    <p>I'm Rupert and I attend the Craft Academy Bootcamp.</p>
+  
+  <div class="container w-1/2 mx-auto rounded overflow-hidden shadow-lg mt-6 bg-grey-lightest" action="#">
+    <form class="new-contact-form" action="#">
+      <div class="flex flex-wrap -mx-3 mb-4 px-3 py-3">
+        <div class="w-1/2 md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="name">Name</label>
+          <input class="font-sans appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" id="contact-name" name="name" type="text" placeholder="Name">
+        </div>
+        <div class="w-1/2 md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="email">Email
+          </label>
+          <input class="font-sans appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" id="contact-email" name="email" type="email" placeholder="Email">
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-4 px-3 py-3">
+        <div class="w-1/2 md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="phone">Phone
+          </label>
+          <input class="font-sans appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" id="contact-phone" name="phone" type="text" placeholder="Phone">
+        </div>
+        <div class="w-1/2 md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="company">Company
+          </label>
+          <input class="font-sans appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" id="contact-company" name="company" type="text" placeholder="Company">
+        </div>
+      </div>
+      <div class="flex flex-wrap -mx-3 mb-4 px-3 py-3">
+        <div class="w-1/2 md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="notes">Notes</label>
+          <textarea class="font-sans appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" id="contact-notes" name="notes" type="text" placeholder="Notes"></textarea>
+        </div>
+        <div class="w-1/2 md:w-1/2 px-3">
+          <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="twitter">Twitter
+          </label>
+          <input class="font-sans appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-grey" id="contact-twitter" name="twitter" type="text" placeholder="Twitter">
+        </div>
+      </div>
+      <div class="w-full text-center md:w-full px-3 py-3">
+        <div class="font-sans bg-white hover:bg-grey-lightest text-grey-darkest py-2 px-4 border border-grey-light rounded shadow">
+          <input class="save-contact" type="submit" value="Save contact"> 
+        </div>
+      </div>
+    </form>
+    <div class="w-full text-center md:w-full px-3 mb-6 py-3">
+      <div class="font-sans bg-white hover:bg-grey-lightest text-grey-darkest py-2 px-4 border border-grey-light rounded shadow">
+        <button class="add-contact">Add Contact</button>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <script src="./dist/bundle.js"></script>
+  <div class="contact-list">
+    
+  </div>  
 </body>
+
 
 </html>
